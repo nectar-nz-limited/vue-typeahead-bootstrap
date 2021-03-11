@@ -5,6 +5,8 @@
     aria-haspopup="listbox"
     :aria-owns="`result-list-${id}`"
     :aria-expanded="(isFocused && data.length > 0) ? 'true' : 'false'"
+    :is-focused="isFocused"
+    :has-value="value.length > 0"
   >
     <div :class="inputGroupClasses">
       <div ref="prependDiv" v-if="$slots.prepend || prepend" class="input-group-prepend">
